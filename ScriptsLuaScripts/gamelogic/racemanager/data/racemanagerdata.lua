@@ -1,0 +1,30 @@
+module("raceManager", package.seeall)
+defaultRaceSettings = {raceProgressPerformanceBoostThreshold = 0.7, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 0}
+raceSettingsPerMission = {
+  ["1 Downtown race"] = {raceProgressPerformanceBoostThreshold = 0.8, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 50},
+  ["Easy Street"] = {raceProgressPerformanceBoostThreshold = 0.8, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 55},
+  ["Team colours 01"] = {raceProgressPerformanceBoostThreshold = 0.7, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 25},
+  ["Speed Race"] = {raceProgressPerformanceBoostThreshold = 0.8, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 40},
+  ["Race away"] = {raceProgressPerformanceBoostThreshold = 0.8, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 50},
+  ["High plains drifter"] = {raceProgressPerformanceBoostThreshold = 0.8, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 43},
+  ["Marin County race"] = {raceProgressPerformanceBoostThreshold = 0.85, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 55},
+  ["RaceActivity1"] = {raceProgressPerformanceBoostThreshold = 0.8, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 40},
+  ["RaceActivity2"] = {raceProgressPerformanceBoostThreshold = 0.8, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 45},
+  ["RaceActivity3"] = {raceProgressPerformanceBoostThreshold = 0.8, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 50},
+  ["RaceAwayActivity1"] = {raceProgressPerformanceBoostThreshold = 0.8, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 40},
+  ["RaceAwayActivity2"] = {raceProgressPerformanceBoostThreshold = 0.8, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 45},
+  ["RaceAwayActivity3"] = {raceProgressPerformanceBoostThreshold = 0.8, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 50},
+  ["RelayRaceActivity"] = {raceProgressPerformanceBoostThreshold = 1, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 0},
+  ["TC1Activity"] = {raceProgressPerformanceBoostThreshold = 0.7, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 18},
+  ["TC2Activity"] = {raceProgressPerformanceBoostThreshold = 0.7, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 27},
+  ["TC3Activity"] = {raceProgressPerformanceBoostThreshold = 0.7, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 30.5},
+  ["TC4Activity"] = {raceProgressPerformanceBoostThreshold = 0.7, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 5},
+  ["TC5Activity"] = {raceProgressPerformanceBoostThreshold = 0.8, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 30},
+  ["RallyFaceOff"] = {raceProgressPerformanceBoostThreshold = 0.75, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 30},
+  ["FreewayFaceoff"] = {raceProgressPerformanceBoostThreshold = 0.9, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 45},
+  ["MarinEscape"] = {raceProgressPerformanceBoostThreshold = 0.8, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 45.5},
+  ["Team colours tutorial"] = {raceProgressPerformanceBoostThreshold = 0.8, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 40},
+  ["RelayRace"] = {raceProgressPerformanceBoostThreshold = 1, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 0},
+  ["Uplaych1"] = {raceProgressPerformanceBoostThreshold = 0.8, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 40},
+  ["Uplaych2"] = {raceProgressPerformanceBoostThreshold = 0.8, raceMaxSpeedReductionAfterPlayerHasBeenLeadingInSecondPart = 40.5}
+}

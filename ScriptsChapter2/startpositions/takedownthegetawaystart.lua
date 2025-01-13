@@ -1,0 +1,11 @@
+startPositions = startPositions or {}
+startPositions["Takedown the getaway start"] = {}
+startPositions["Takedown the getaway start"].position = vec.vector(-272.0327, 18.68817, 1044.385, 1)
+startPositions["Takedown the getaway start"].heading = -1.472669
+spawnPositions = spawnPositions or {}
+spawnPositions["Takedown the getaway evade spawn"] = {}
+spawnPositions["Takedown the getaway evade spawn"].position = vec.vector(-328.2654, 19.44973, 1050.263, 1)
+spawnPositions["Takedown the getaway evade spawn"].heading = -1.421071
+spawnPositions["Takedown the getaway cop spawn"] = {}
+spawnPositions["Takedown the getaway cop spawn"].position = vec.vector(-272.0327, 18.68817, 1044.385, 1)
+spawnPositions["Takedown the getaway cop spawn"].heading = -1.472669

@@ -1,0 +1,15 @@
+routes = routes or {}
+routes["Protect the base"] = {}
+routes["Protect the base"].checkpoints = {}
+routes["Protect the base"].checkpoints[1] = {}
+routes["Protect the base"].checkpoints[1].position = vec.vector(553.7615, 14.31405, 844.2029, 1)
+routes["Protect the base"].checkpoints[1].heading = -0.100192
+routes["Protect the base"].checkpoints[1].roadName = "dt_shortcut_01 AI Road 1"
+routes["Protect the base"].arrows = {}
+routes["Protect the base"].roads = {}
+routes["Protect the base"].roads[1] = {}
+routes["Protect the base"].roads[1].road = "dt_shortcut_01 AI Road 1"
+routes["Protect the base"].roads[1].direction = "with"
+routes["Protect the base"].roads[2] = {}
+routes["Protect the base"].roads[2].road = "dt_10l_south_01 AI Road 0"
+routes["Protect the base"].roads[2].direction = "against"

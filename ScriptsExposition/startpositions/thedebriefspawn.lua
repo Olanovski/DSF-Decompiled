@@ -1,0 +1,16 @@
+spawnPositions = spawnPositions or {}
+spawnPositions["The debrief tanner spawn"] = {}
+spawnPositions["The debrief tanner spawn"].position = vec.vector(-487.4361, 25.24098, 1234.687, 1)
+spawnPositions["The debrief tanner spawn"].heading = -1.557143
+spawnPositions["The debrief tanner mission start spawn"] = {}
+spawnPositions["The debrief tanner mission start spawn"].position = vec.vector(-487.4361, 25.24098, 1234.687, 1)
+spawnPositions["The debrief tanner mission start spawn"].heading = -1.557143
+spawnPositions["Static cop 01"] = {}
+spawnPositions["Static cop 01"].position = vec.vector(-364.908, 69.97694, 186.0233, 1)
+spawnPositions["Static cop 01"].heading = 1.705916
+spawnPositions["Static cop 02"] = {}
+spawnPositions["Static cop 02"].position = vec.vector(-375.6193, 69.9668, 187.6452, 1)
+spawnPositions["Static cop 02"].heading = 1.705916
+spawnPositions["Static cop 04"] = {}
+spawnPositions["Static cop 04"].position = vec.vector(-365.7267, 69.93021, 177.5851, 1)
+spawnPositions["Static cop 04"].heading = -1.411406

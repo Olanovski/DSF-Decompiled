@@ -1,0 +1,94 @@
+feedbackSystem.registerTargetManager("Instance vehicles", "Instance", function(task, settings)
+  local vehicleStyleIDs = {}
+  local settings = settings or {all = true}
+  local function drawTaskObjectVehicle(taskObject, newSettings)
+    local vehicle = taskObject.coreData.agent
+    local team = taskObject.coreData.actor.team
+    local selectedStyles = false
+    if newSettings then
+      if team and newSettings.styles[team] then
+        selectedStyles = newSettings.styles[team]
+      elseif newSettings.styles[1] then
+        if #newSettings.styles > 1 then
+          selectedStyles = newSettings.styles
+        else
+          selectedStyles = newSettings.styles[1]
+        end
+      elseif newSettings.styles.generic then
+        selectedStyles = newSettings.styles.generic
+      end
+    end
+    if selectedStyles and type(selectedStyles) == "table" then
+      vehicleStyleIDs[vehicle.gameVehicle] = {}
+      for style, styleParams in next, selectedStyles, nil do
+        table.insert(vehicleStyleIDs[vehicle.gameVehicle], feedbackSystem.newTarget(vehicle, selectedStyles[style]))
+      end
+    elseif selectedStyles then
+      vehicleStyleIDs[vehicle.gameVehicle] = {}
+      table.insert(vehicleStyleIDs[vehicle.gameVehicle], feedbackSystem.newTarget(vehicle, selectedStyles))
+    end
+  end
+  local function clearTarget(gameVehicle)
+    if vehicleStyleIDs[gameVehicle] then
+      for i, drawListID in ipairs(vehicleStyleIDs[gameVehicle]) do
+        feedbackSystem.clearTarget(drawListID)
+      end
+      vehicleStyleIDs[gameVehicle] = nil
+    end
+  end
+  local function taskObjectAgentIsValid(taskObject)
+    local vehicle = taskObject.coreData.agent
+    if vehicleStyleIDs[vehicle.gameVehicle] then
+      return false
+    end
+    if task.targetList then
+      for i, target in next, task.targetList, nil do
+        if target == vehicle then
+          return false
+        end
+      end
+    end
+    return true
+  end
+  local function drawMarkerCheck(taskObject)
+    if taskObject.coreData.actor.markerType and taskObject.coreData.actor.markerType ~= "None" then
+      local newSettings = feedbackSystem.vehicleMarkerTypes[taskObject.coreData.actor.markerType]
+      if taskObjectAgentIsValid(taskObject) then
+        drawTaskObjectVehicle(taskObject, newSettings)
+      end
+    end
+  end
+  local function draw()
+    local playerTaskObject = localPlayer:getTaskObject()
+    if settings.selfOnly then
+      drawMarkerCheck(playerTaskObject)
+    else
+      for actorID, taskObject in next, task.instance.taskObjectsByActorID, nil do
+        if settings.teammatesOnly and taskObject.coreData.actor.team == playerTaskObject.coreData.actor.team or settings.all then
+          drawMarkerCheck(taskObject)
+        end
+      end
+    end
+  end
+  local function update()
+    for gameVehicle, value in next, vehicleStyleIDs, nil do
+      local remove = true
+      for actorID, taskObject in next, task.instance.taskObjectsByActorID, nil do
+        if gameVehicle == taskObject.coreData.agent.gameVehicle and taskObject.coreData.actor.markerType ~= "None" then
+          remove = false
+          break
+        end
+      end
+      if remove then
+        clearTarget(gameVehicle)
+      end
+    end
+    draw()
+  end
+  local function cleanup()
+    for gameVehicle, drawListIDs in next, vehicleStyleIDs, nil do
+      clearTarget(gameVehicle)
+    end
+  end
+  return update, cleanup
+end)

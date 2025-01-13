@@ -1,0 +1,13 @@
+startPositions = startPositions or {}
+startPositions["Tanner & Jones Mission 2 start"] = {}
+startPositions["Tanner & Jones Mission 2 start"].position = vec.vector(-1397.872, 34.61316, 444.1152, 1)
+startPositions["Tanner & Jones Mission 2 start"].heading = 0.1965684
+softSaveStartPositions = softSaveStartPositions or {}
+softSaveStartPositions["Tanner & Jones Mission 2"] = {}
+softSaveStartPositions["Tanner & Jones Mission 2"][1] = {}
+softSaveStartPositions["Tanner & Jones Mission 2"][1].Tanner = {}
+softSaveStartPositions["Tanner & Jones Mission 2"][1].Tanner.position = vec.vector(-1877.64, 54.91096, 1396.967, 1)
+softSaveStartPositions["Tanner & Jones Mission 2"][1].Tanner.heading = -3.02879
+softSaveStartPositions["Tanner & Jones Mission 2"][1].Leila = {}
+softSaveStartPositions["Tanner & Jones Mission 2"][1].Leila.position = vec.vector(-1879.476, 54.51566, 1371.636, 1)
+softSaveStartPositions["Tanner & Jones Mission 2"][1].Leila.heading = -2.995912

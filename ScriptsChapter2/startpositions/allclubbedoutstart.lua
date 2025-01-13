@@ -1,0 +1,10 @@
+startPositions = startPositions or {}
+startPositions["All clubbed out"] = {}
+startPositions["All clubbed out"].position = vec.vector(-1765.656, 5.214, -193.32, 1)
+startPositions["All clubbed out"].heading = 1.412
+softSaveStartPositions = softSaveStartPositions or {}
+softSaveStartPositions["All clubbed out"] = {}
+softSaveStartPositions["All clubbed out"][1] = {}
+softSaveStartPositions["All clubbed out"][1].Agent = {}
+softSaveStartPositions["All clubbed out"][1].Agent.position = vec.vector(-1715.79, 5.288, -189.672, 1)
+softSaveStartPositions["All clubbed out"][1].Agent.heading = 1.422

@@ -1,0 +1,15 @@
+startPositions = startPositions or {}
+startPositions["Exposition part 4"] = {}
+startPositions["Exposition part 4"].position = vec.vector(150.9181, 41.01329, 2256.365, 1)
+startPositions["Exposition part 4"].heading = -2.466584
+startPositions["Exposition part 4"].radius = 400
+spawnPositions = spawnPositions or {}
+spawnPositions["Go for a spin"] = {}
+spawnPositions["Go for a spin"].position = vec.vector(150.9181, 41.01329, 2256.365, 1)
+spawnPositions["Go for a spin"].heading = -2.466584
+softSaveStartPositions = softSaveStartPositions or {}
+softSaveStartPositions["Exposition 04 return to dealer"] = {}
+softSaveStartPositions["Exposition 04 return to dealer"][1] = {}
+softSaveStartPositions["Exposition 04 return to dealer"][1].Lamborghini = {}
+softSaveStartPositions["Exposition 04 return to dealer"][1].Lamborghini.position = vec.vector(-321.0854, 69.97898, 4.279378, 1)
+softSaveStartPositions["Exposition 04 return to dealer"][1].Lamborghini.heading = 1.875607

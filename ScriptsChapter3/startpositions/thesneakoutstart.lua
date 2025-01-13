@@ -1,0 +1,10 @@
+startPositions = startPositions or {}
+startPositions["The Sneakout start"] = {}
+startPositions["The Sneakout start"].position = vec.vector(734.215, 5.941301, 1217.263, 1)
+startPositions["The Sneakout start"].heading = -1.089085
+softSaveStartPositions = softSaveStartPositions or {}
+softSaveStartPositions.TheSneakout = {}
+softSaveStartPositions.TheSneakout[1] = {}
+softSaveStartPositions.TheSneakout[1].Player = {}
+softSaveStartPositions.TheSneakout[1].Player.position = vec.vector(-1206.861, 28.54742, 485.8609, 1)
+softSaveStartPositions.TheSneakout[1].Player.heading = -1.376823

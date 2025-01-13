@@ -1,0 +1,16 @@
+spawnPositions = spawnPositions or {}
+spawnPositions["Something weird tanner"] = {}
+spawnPositions["Something weird tanner"].position = vec.vector(603.9483, 17.99986, 1893.65, 1)
+spawnPositions["Something weird tanner"].heading = -2.364233
+spawnPositions["Something weird tanner teleport"] = {}
+spawnPositions["Something weird tanner teleport"].position = vec.vector(230.5262, 18.03386, 1456.543, 1)
+spawnPositions["Something weird tanner teleport"].heading = 2.257162
+spawnPositions["Something weird tanner teleport 2"] = {}
+spawnPositions["Something weird tanner teleport 2"].position = vec.vector(713.4426, 15.9875, 275.1991, 1)
+spawnPositions["Something weird tanner teleport 2"].heading = -3.127311
+spawnPositions["Something weird ambulance"] = {}
+spawnPositions["Something weird ambulance"].position = vec.vector(283.4344, 18.17561, 1557.5, 1)
+spawnPositions["Something weird ambulance"].heading = -2.41304
+spawnPositions["Something weird ambulance 2"] = {}
+spawnPositions["Something weird ambulance 2"].position = vec.vector(697.6349, 15.66944, 151.54, 1)
+spawnPositions["Something weird ambulance 2"].heading = -3.107702

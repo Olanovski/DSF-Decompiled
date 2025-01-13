@@ -1,0 +1,10 @@
+startPositions = startPositions or {}
+startPositions.Survival = {}
+startPositions.Survival.position = vec.vector(-3102.791, 40.68101, 136.2741, 1)
+startPositions.Survival.heading = -2.004046
+startPositions.Survival.radius = 400
+spawnPositions = spawnPositions or {}
+spawnPositions.Survival = {}
+spawnPositions.Survival.position = vec.vector(-3102.791, 40.68101, 136.2741, 1)
+spawnPositions.Survival.heading = -2.004046
+spawnPositions.Survival.radius = 400

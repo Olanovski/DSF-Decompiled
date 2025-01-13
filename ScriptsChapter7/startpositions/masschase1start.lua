@@ -1,0 +1,15 @@
+startPositions = startPositions or {}
+startPositions["Mass chase 1 player"] = {}
+startPositions["Mass chase 1 player"].position = vec.vector(-1224.481, 173.0543, 4001.077, 1)
+startPositions["Mass chase 1 player"].heading = -2.788491
+startPositions["Mass chase 1 player"].radius = 400
+softSaveStartPositions = softSaveStartPositions or {}
+softSaveStartPositions["Mass Chase"] = {}
+softSaveStartPositions["Mass Chase"][1] = {}
+softSaveStartPositions["Mass Chase"][1].Player = {}
+softSaveStartPositions["Mass Chase"][1].Player.position = vec.vector(-1948.605, 65.72076, 1777.692, 1)
+softSaveStartPositions["Mass Chase"][1].Player.heading = -3.026603
+softSaveStartPositions["Mass Chase"][2] = {}
+softSaveStartPositions["Mass Chase"][2].Player = {}
+softSaveStartPositions["Mass Chase"][2].Player.position = vec.vector(-1092.577, 66.6452, 1896.028, 1)
+softSaveStartPositions["Mass Chase"][2].Player.heading = 1.559161

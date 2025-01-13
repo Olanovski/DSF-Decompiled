@@ -1,0 +1,14 @@
+startPositions = startPositions or {}
+startPositions["Felony lure location A"] = {}
+startPositions["Felony lure location A"].position = vec.vector(1102.529, 6.176698, 670.1043, 1)
+startPositions["Felony lure location A"].heading = -0.8887998
+softSaveStartPositions = softSaveStartPositions or {}
+softSaveStartPositions["Felony lure"] = {}
+softSaveStartPositions["Felony lure"][1] = {}
+softSaveStartPositions["Felony lure"][1].MissionVehicle = {}
+softSaveStartPositions["Felony lure"][1].MissionVehicle.position = vec.vector(-52.18973, 42.16614, 884.3066, 1)
+softSaveStartPositions["Felony lure"][1].MissionVehicle.heading = -0.4478729
+softSaveStartPositions["Felony lure"][2] = {}
+softSaveStartPositions["Felony lure"][2].MissionVehicle = {}
+softSaveStartPositions["Felony lure"][2].MissionVehicle.position = vec.vector(-3345.978, 52.14122, 1399.035, 1)
+softSaveStartPositions["Felony lure"][2].MissionVehicle.heading = -2.157134

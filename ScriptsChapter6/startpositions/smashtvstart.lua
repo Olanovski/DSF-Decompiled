@@ -1,0 +1,11 @@
+startPositions = startPositions or {}
+startPositions["Smash tv start"] = {}
+startPositions["Smash tv start"].position = vec.vector(-2853.225, 148.1901, 4307.487, 1)
+startPositions["Smash tv start"].heading = -1.815614
+startPositions["Smash tv start"].radius = 40
+softSaveStartPositions = softSaveStartPositions or {}
+softSaveStartPositions["Smash tv"] = {}
+softSaveStartPositions["Smash tv"][1] = {}
+softSaveStartPositions["Smash tv"][1].Getaway = {}
+softSaveStartPositions["Smash tv"][1].Getaway.position = vec.vector(-4442.408, 21.55098, 3297.339, 1)
+softSaveStartPositions["Smash tv"][1].Getaway.heading = 3.137026

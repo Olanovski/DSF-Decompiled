@@ -1,0 +1,14 @@
+startPositions = startPositions or {}
+startPositions.EscapeStart = {}
+startPositions.EscapeStart.position = vec.vector(-1433.957, 40.20554, 1095.675, 1)
+startPositions.EscapeStart.heading = 0.1360026
+startPositions.EscapeStart.radius = 400
+spawnPositions = spawnPositions or {}
+spawnPositions.EscapeCopSpawn = {}
+spawnPositions.EscapeCopSpawn.position = vec.vector(-1458.153, 43.98767, 897.5839, 1)
+spawnPositions.EscapeCopSpawn.heading = 0.1648187
+spawnPositions.EscapeCopSpawn.radius = 400
+spawnPositions.EscapeStart = {}
+spawnPositions.EscapeStart.position = vec.vector(-1433.957, 40.20554, 1095.675, 1)
+spawnPositions.EscapeStart.heading = 0.1360026
+spawnPositions.EscapeStart.radius = 400

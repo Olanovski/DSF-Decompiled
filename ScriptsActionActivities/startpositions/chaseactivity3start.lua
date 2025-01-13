@@ -1,0 +1,11 @@
+startPositions = startPositions or {}
+startPositions["ChaseActivity3 start"] = {}
+startPositions["ChaseActivity3 start"].position = vec.vector(-4330.015, 21.51263, 1688.997, 1)
+startPositions["ChaseActivity3 start"].heading = -3.128597
+spawnPositions = spawnPositions or {}
+spawnPositions["ChaseActivity3 Player spawn"] = {}
+spawnPositions["ChaseActivity3 Player spawn"].position = vec.vector(-4330.015, 21.51263, 1688.997, 1)
+spawnPositions["ChaseActivity3 Player spawn"].heading = -3.128597
+spawnPositions["ChaseActivity3 Opponent spawn"] = {}
+spawnPositions["ChaseActivity3 Opponent spawn"].position = vec.vector(-4369.158, 22.15518, 1609.128, 1)
+spawnPositions["ChaseActivity3 Opponent spawn"].heading = 1.613723

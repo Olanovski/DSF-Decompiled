@@ -1,0 +1,10 @@
+spawnPositions = spawnPositions or {}
+spawnPositions["Sneakout player start position"] = {}
+spawnPositions["Sneakout player start position"].position = vec.vector(829.592, 5.958, 1136.534, 1)
+spawnPositions["Sneakout player start position"].heading = -0.858
+spawnPositions["Suspicious vehicle start position 1"] = {}
+spawnPositions["Suspicious vehicle start position 1"].position = vec.vector(-1169.519, 27.007, 474.237, 1)
+spawnPositions["Suspicious vehicle start position 1"].heading = -1.413
+spawnPositions["Suspicious vehicle start position 2"] = {}
+spawnPositions["Suspicious vehicle start position 2"].position = vec.vector(-1171.152, 26.919, 483.56, 1)
+spawnPositions["Suspicious vehicle start position 2"].heading = 1.756

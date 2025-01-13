@@ -1,0 +1,13 @@
+spawnPositions = spawnPositions or {}
+spawnPositions["Breaking news 2 van 1"] = {}
+spawnPositions["Breaking news 2 van 1"].position = vec.vector(-2784.278, 64.43452, -2497.777, 1)
+spawnPositions["Breaking news 2 van 1"].heading = -0.1313767
+spawnPositions["Breaking news ramp truck 1"] = {}
+spawnPositions["Breaking news ramp truck 1"].position = vec.vector(-1302.79, 133.0513, -4743.227, 1)
+spawnPositions["Breaking news ramp truck 1"].heading = -2.503429
+spawnPositions["Breaking news ramp truck 2"] = {}
+spawnPositions["Breaking news ramp truck 2"].position = vec.vector(-1199.648, 140.6571, -4607.849, 1)
+spawnPositions["Breaking news ramp truck 2"].heading = -2.635971
+spawnPositions["Breaking news ramp truck 3"] = {}
+spawnPositions["Breaking news ramp truck 3"].position = vec.vector(-1699.261, 155.0589, -4033.638, 1)
+spawnPositions["Breaking news ramp truck 3"].heading = 2.849832

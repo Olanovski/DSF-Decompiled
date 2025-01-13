@@ -1,0 +1,21 @@
+FileTree.ModeFiles = {
+  "Anything_you_can_do.lua",
+  "Logic\\AnythingYouCanDoLogic.lua",
+  "APIP\\AnythingYouCanDoAPIP.lua",
+  "HUD\\AnythingYouCanDoHUD.lua",
+  "RouteData\\AnythingYouCanDoRoute.lua",
+  "Avoid_The_Cars.lua",
+  "Logic\\AvoidTheCarsLogic.lua",
+  "APIP\\AvoidTheCarsAPIP.lua",
+  "HUD\\AvoidTheCarsHUD.lua",
+  "RouteData\\AvoidTheCarsRoute.lua",
+  "StartPositions\\AvoidTheCarsSpawn.lua",
+  "StartPositions\\AvoidTheCarsStart.lua",
+  "Final_fight.lua",
+  "Logic\\FinalFightLogic.lua",
+  "APIP\\FinalFightAPIP.lua",
+  "HUD\\FinalFightHUD.lua",
+  "RouteData\\FinalFightRoute.lua",
+  "StartPositions\\FinalFightSpawn.lua",
+  "StartPositions\\FinalFightStart.lua"
+}

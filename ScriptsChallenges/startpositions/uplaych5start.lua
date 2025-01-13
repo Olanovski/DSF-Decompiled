@@ -1,0 +1,10 @@
+startPositions = startPositions or {}
+startPositions.Uplaych5Start = {}
+startPositions.Uplaych5Start.position = vec.vector(-658.2229, 5.162409, -241.2572, 1)
+startPositions.Uplaych5Start.heading = -0.4327086
+startPositions.Uplaych5Start.radius = 400
+spawnPositions = spawnPositions or {}
+spawnPositions.Uplaych5Start = {}
+spawnPositions.Uplaych5Start.position = vec.vector(-658.2229, 5.162409, -241.2572, 1)
+spawnPositions.Uplaych5Start.heading = -0.4327086
+spawnPositions.Uplaych5Start.radius = 400

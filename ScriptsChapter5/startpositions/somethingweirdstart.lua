@@ -1,0 +1,14 @@
+startPositions = startPositions or {}
+startPositions["Something weird tanner"] = {}
+startPositions["Something weird tanner"].position = vec.vector(603.9483, 17.99986, 1893.65, 1)
+startPositions["Something weird tanner"].heading = -2.364233
+startPositions["Something weird tanner"].radius = 400
+softSaveStartPositions = softSaveStartPositions or {}
+softSaveStartPositions["Something weird"] = {}
+softSaveStartPositions["Something weird"][1] = {}
+softSaveStartPositions["Something weird"][1].Tanner = {}
+softSaveStartPositions["Something weird"][1].Tanner.position = vec.vector(703.7274, 15.96978, 194.899, 1)
+softSaveStartPositions["Something weird"][1].Tanner.heading = -3.127311
+softSaveStartPositions["Something weird"][1]["Ambulance 2"] = {}
+softSaveStartPositions["Something weird"][1]["Ambulance 2"].position = vec.vector(697.6349, 15.66944, 151.54, 1)
+softSaveStartPositions["Something weird"][1]["Ambulance 2"].heading = -3.107702

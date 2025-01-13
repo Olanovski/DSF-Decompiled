@@ -1,0 +1,604 @@
+module("felony_chase", package.seeall)
+defaultChaseSettings = {
+  requiredNumberOfChasers = 2,
+  maximumNumberOfChasers = 2,
+  radius = 150,
+  escapeTime = 10,
+  cantEscapeTime = 10,
+  catchupWindowTime = 15,
+  getawayHelperTime = 90,
+  getawayDamageMultiplier = 1,
+  getawayMaxDamagePerhit = 0.5,
+  spawnTime = 5,
+  spawnTimeMax = 10,
+  spawnMultiplier = 1,
+  spawnMultiplierMin = 0,
+  minSpawnDistance = 100,
+  spawnBehindProbability = 0.7,
+  spawnSideProbability = 0.3,
+  spawnInfrontProbability = 0.1,
+  spawnSpeed = 15,
+  leavingChaseAreaWarningDistance = 350,
+  chaseAreaRadius = 500,
+  chaseAreaCountDownTime = 10,
+  normalRBRadiusFollowDistanceMultiplier = 0.5,
+  fullPlayerAnalysisRBMaxVelocity = 50,
+  fullPlayerAnalysisRBMinVelocity = 35,
+  fullPlayerAnalysisRBPlayerStrength = 30,
+  fullPlayerAnalysisRBPlayerFollowDistance = 10,
+  fullPlayerAnalysisRBPlayerFollowRange = 20,
+  fullPlayerAnalysisRBCatchupPerformanceTweak = 0.25,
+  playerOnlyTakedownMaxDamageGetaway = 0,
+  playerOnlyTakedownMaxDamageChase = 0,
+  chaseMode = "Cop",
+  normalRouteGenerationPreset = "Hard",
+  catchupWindowRouteGenerationPreset = "Easiest",
+  postHelperRouteGenerationPreset = "Easy",
+  losingString = "ID:235433",
+  rapidShiftAvaliable = false,
+  disableGenericFelonyPrompts = false,
+  getawayTraits = {
+    desiredSpeed = 35,
+    rubberBandPlayerStrength = 20,
+    rubberBandMinVelocity = 20,
+    getawayCollisionThreshold = 2,
+    stayInLockedArea = true,
+    uTurnAllowedIfNotInLockedArea = true
+  },
+  chaserTraits = {
+    vehicleExtentsEnlargeLength = 0.5,
+    vehicleInfluenceAreaLength = 0.5,
+    stickToDesiredSpeed = 1,
+    stayInLockedArea = true
+  },
+  chaserGroupTakedownParams = {
+    groupTakeDownEnableBlock = false,
+    groupTakeDownEnableBust = false,
+    groupTakeDownFollowDistanceforNonAttackers = 15
+  },
+  playerAnalysis = {
+    Drift = 1,
+    Jump = 1,
+    Overtake = 1,
+    OvertakeOncomming = 1,
+    Trailer = 1,
+    HighSpeedDriving = 1,
+    SafeDriving = 1,
+    PlayerCollision = 0.01,
+    DrivingInAnAlley = 0
+  },
+  playerAnalysisDecay = 0.0001
+}
+chaseSettingsPerChapter = {
+  [0] = {
+    requiredNumberOfChasers = 1,
+    maximumNumberOfChasers = 1,
+    spawnTime = 4,
+    spawnTimeMax = 7,
+    minSpawnDistance = 100,
+    getawayHelperTime = 60,
+    normalRBRadiusFollowDistanceMultiplier = 0.3,
+    normalRouteGenerationPreset = "Easy",
+    getawayTraits = {
+      desiredSpeed = 43,
+      rubberBandPlayerStrength = 25,
+      rubberBandMinVelocity = 30,
+      rubberBandMaxVelocity = 46,
+      rubberBandPlayerFollowRange = 20
+    },
+    fullPlayerAnalysisRBMinVelocity = 20,
+    fullPlayerAnalysisRBMaxVelocity = 30,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 1.8,
+    getawayMaxDamagePerhit = 0.4
+  },
+  [2] = {
+    spawnTime = 4,
+    spawnTimeMax = 8,
+    minSpawnDistance = 100,
+    normalRBRadiusFollowDistanceMultiplier = 0.3,
+    normalRouteGenerationPreset = "Easy",
+    getawayTraits = {
+      desiredSpeed = 40,
+      rubberBandPlayerStrength = 20,
+      rubberBandMinVelocity = 30,
+      rubberBandMaxVelocity = 48,
+      rubberBandPlayerFollowRange = 20
+    },
+    fullPlayerAnalysisRBMinVelocity = 20,
+    fullPlayerAnalysisRBMaxVelocity = 30,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 1.7,
+    getawayMaxDamagePerhit = 0.4
+  },
+  [4] = {
+    spawnTime = 8,
+    spawnTimeMax = 12,
+    minSpawnDistance = 100,
+    normalRBRadiusFollowDistanceMultiplier = 0.35,
+    normalRouteGenerationPreset = "Medium",
+    getawayTraits = {
+      desiredSpeed = 42,
+      rubberBandPlayerStrength = 15,
+      rubberBandMinVelocity = 31,
+      rubberBandMaxVelocity = 46,
+      rubberBandPlayerFollowRange = 20
+    },
+    fullPlayerAnalysisRBMinVelocity = 25,
+    fullPlayerAnalysisRBMaxVelocity = 30,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 1.6,
+    getawayMaxDamagePerhit = 0.4
+  },
+  [6] = {
+    spawnTime = 8,
+    spawnTimeMax = 12,
+    minSpawnDistance = 100,
+    normalRBRadiusFollowDistanceMultiplier = 0.4,
+    normalRouteGenerationPreset = "Medium",
+    getawayTraits = {
+      desiredSpeed = 46,
+      rubberBandPlayerStrength = 20,
+      rubberBandMinVelocity = 33,
+      rubberBandMaxVelocity = 52,
+      rubberBandPlayerFollowRange = 20
+    },
+    fullPlayerAnalysisRBMinVelocity = 30,
+    fullPlayerAnalysisRBMaxVelocity = 35,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 1.5,
+    getawayMaxDamagePerhit = 0.4,
+    playerAnalysis = {
+      Drift = 1.2,
+      Jump = 1.3,
+      Overtake = 1.1,
+      OvertakeOncomming = 1.3,
+      Trailer = 2,
+      HighSpeedDriving = 1.3,
+      SafeDriving = 1.3,
+      PlayerCollision = 0.01,
+      DrivingInAnAlley = 1.1
+    },
+    playerAnalysisDecay = 0.0001
+  }
+}
+chaseSettingsPerMission = {
+  ["Exposition 06 Law Breaker (cop)"] = {
+    requiredNumberOfChasers = 1,
+    normalRBRadiusFollowDistanceMultiplier = 0.3,
+    normalRouteGenerationPreset = "Easiest",
+    getawayTraits = {
+      desiredSpeed = 37,
+      rubberBandPlayerStrength = 20,
+      rubberBandMinVelocity = 25,
+      rubberBandMaxVelocity = 44,
+      rubberBandPlayerFollowRange = 20,
+      getawayCollisionThreshold = 2
+    },
+    fullPlayerAnalysisRBMinVelocity = 25,
+    fullPlayerAnalysisRBMaxVelocity = 30,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 2.8,
+    getawayMaxDamagePerhit = 0.6,
+    playerAnalysis = {
+      Drift = 0.9,
+      Jump = 0.5,
+      Overtake = 0.5,
+      OvertakeOncomming = 1,
+      Trailer = 1,
+      HighSpeedDriving = 0.8,
+      SafeDriving = 0.9,
+      PlayerCollision = 0.01,
+      DrivingInAnAlley = 0
+    },
+    playerAnalysisDecay = 0.0001
+  },
+  ["Tutorial Mission Rapid Shift"] = {
+    requiredNumberOfChasers = 2,
+    normalRBRadiusFollowDistanceMultiplier = 0.2,
+    normalRouteGenerationPreset = "Easiest",
+    getawayTraits = {
+      desiredSpeed = 47,
+      rubberBandPlayerStrength = 20,
+      rubberBandMinVelocity = 10,
+      rubberBandMaxVelocity = 56,
+      rubberBandPlayerFollowRange = 20,
+      getawayCollisionThreshold = 1
+    },
+    fullPlayerAnalysisRBMinVelocity = 10,
+    fullPlayerAnalysisRBMaxVelocity = 25,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 2.2,
+    getawayMaxDamagePerhit = 0.4,
+    playerAnalysis = {
+      Drift = 0.9,
+      Jump = 0.6,
+      Overtake = 0.5,
+      OvertakeOncomming = 0.8,
+      Trailer = 1,
+      HighSpeedDriving = 1,
+      SafeDriving = 1,
+      PlayerCollision = 0.01,
+      DrivingInAnAlley = 0
+    },
+    playerAnalysisDecay = 0.0001
+  },
+  ["Take down"] = {
+    requiredNumberOfChasers = 2,
+    normalRBRadiusFollowDistanceMultiplier = 0.4,
+    normalRouteGenerationPreset = "Easy",
+    getawayTraits = {
+      desiredSpeed = 37,
+      rubberBandPlayerStrength = 25,
+      rubberBandMinVelocity = 28,
+      rubberBandMaxVelocity = 43,
+      rubberBandPlayerFollowRange = 20,
+      getawayCollisionThreshold = 3
+    },
+    fullPlayerAnalysisRBMinVelocity = 25,
+    fullPlayerAnalysisRBMaxVelocity = 32,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 1.2,
+    getawayMaxDamagePerhit = 0.4,
+    playerAnalysis = {
+      Drift = 0.9,
+      Jump = 0.5,
+      Overtake = 0.5,
+      OvertakeOncomming = 1,
+      Trailer = 1,
+      HighSpeedDriving = 0.8,
+      SafeDriving = 0.9,
+      PlayerCollision = 0.01,
+      DrivingInAnAlley = 0
+    },
+    playerAnalysisDecay = 0.0001
+  },
+  ["In the nick of time"] = {
+    requiredNumberOfChasers = 2,
+    normalRBRadiusFollowDistanceMultiplier = 0.4,
+    normalRouteGenerationPreset = "Medium",
+    spawnSpeed = 40,
+    getawayTraits = {
+      desiredSpeed = 52,
+      rubberBandPlayerStrength = 20,
+      rubberBandMinVelocity = 33,
+      rubberBandMaxVelocity = 57,
+      rubberBandPlayerFollowRange = 20,
+      getawayCollisionThreshold = 3,
+      spawnSpeed = 40
+    },
+    fullPlayerAnalysisRBMinVelocity = 25,
+    fullPlayerAnalysisRBMaxVelocity = 40,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 1.1,
+    getawayMaxDamagePerhit = 0.4,
+    playerAnalysis = {
+      Drift = 1.5,
+      Jump = 1,
+      Overtake = 1,
+      OvertakeOncomming = 1,
+      Trailer = 1,
+      HighSpeedDriving = 1.5,
+      SafeDriving = 1.5,
+      PlayerCollision = 0.01,
+      DrivingInAnAlley = 1
+    },
+    playerAnalysisDecay = 0.0001
+  },
+  ["Collateral Damage"] = {
+    requiredNumberOfChasers = 1,
+    chaseMode = "Goon",
+    normalRBRadiusFollowDistanceMultiplier = 0.4,
+    normalRouteGenerationPreset = "Medium",
+    getawayTraits = {
+      desiredSpeed = 48,
+      rubberBandPlayerStrength = 35,
+      rubberBandMinVelocity = 26,
+      rubberBandMaxVelocity = 53,
+      rubberBandPlayerFollowRange = 20,
+      getawayCollisionThreshold = 1
+    },
+    fullPlayerAnalysisRBMinVelocity = 23,
+    fullPlayerAnalysisRBMaxVelocity = 33,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 1.1,
+    getawayMaxDamagePerhit = 0.4,
+    playerAnalysis = {
+      Drift = 0.9,
+      Jump = 0.5,
+      Overtake = 0.5,
+      OvertakeOncomming = 1,
+      Trailer = 1,
+      HighSpeedDriving = 0.8,
+      SafeDriving = 0.9,
+      PlayerCollision = 0.01,
+      DrivingInAnAlley = 0
+    },
+    playerAnalysisDecay = 0.0001,
+    losingString = "ID:236625"
+  },
+  ["Tanner and Jones 7"] = {
+    requiredNumberOfChasers = 1,
+    chaseMode = "Goon",
+    getawayHelperTime = 120,
+    normalRBRadiusFollowDistanceMultiplier = 0.4,
+    normalRouteGenerationPreset = "Medium",
+    getawayTraits = {
+      desiredSpeed = 44,
+      rubberBandPlayerStrength = 15,
+      rubberBandMinVelocity = 31,
+      rubberBandMaxVelocity = 49,
+      rubberBandPlayerFollowRange = 20,
+      getawayCollisionThreshold = 2
+    },
+    fullPlayerAnalysisRBMinVelocity = 28,
+    fullPlayerAnalysisRBMaxVelocity = 32,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 1.2,
+    getawayMaxDamagePerhit = 0.4,
+    playerAnalysis = {
+      Drift = 0.7,
+      Jump = 0.5,
+      Overtake = 0.7,
+      OvertakeOncomming = 0.9,
+      Trailer = 1,
+      HighSpeedDriving = 0.8,
+      SafeDriving = 0.8,
+      PlayerCollision = 0.05,
+      DrivingInAnAlley = 0.5
+    },
+    playerAnalysisDecay = 0.0001,
+    losingString = "ID:245380"
+  },
+  ["Final fight"] = {
+    requiredNumberOfChasers = 1,
+    chaseMode = "Goon",
+    normalRBRadiusFollowDistanceMultiplier = 0.3,
+    normalRouteGenerationPreset = "Easy",
+    disableGenericFelonyPrompts = true,
+    getawayHelperTime = 120,
+    getawayTraits = {
+      desiredSpeed = 44,
+      rubberBandPlayerStrength = 20,
+      rubberBandMinVelocity = 24,
+      rubberBandMaxVelocity = 47,
+      rubberBandPlayerFollowRange = 20,
+      getawayCollisionThreshold = 2,
+      spawnSpeed = 15
+    },
+    fullPlayerAnalysisRBMinVelocity = 25,
+    fullPlayerAnalysisRBMaxVelocity = 30,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 1.2,
+    getawayMaxDamagePerhit = 0.4,
+    playerAnalysis = {
+      Drift = 0.8,
+      Jump = 0.5,
+      Overtake = 0.7,
+      OvertakeOncomming = 0.9,
+      Trailer = 1,
+      HighSpeedDriving = 0.9,
+      SafeDriving = 0.9,
+      PlayerCollision = 0.01,
+      DrivingInAnAlley = 0.7
+    },
+    playerAnalysisDecay = 0.0001,
+    losingString = "ID:236625"
+  },
+  ["TheDriver"] = {
+    requiredNumberOfChasers = 1,
+    chaseMode = "Goon",
+    cantEscapeTime = 12,
+    normalRBRadiusFollowDistanceMultiplier = 0.4,
+    getawayTraits = {
+      desiredSpeed = 32,
+      rubberBandPlayerStrength = 15,
+      rubberBandMinVelocity = 28,
+      rubberBandMaxVelocity = 43,
+      getawayCollisionThreshold = 2
+    },
+    fullPlayerAnalysisRBMinVelocity = 20,
+    fullPlayerAnalysisRBPlayerStrength = 30,
+    getawayDamageMultiplier = 1.5,
+    getawayMaxDamagePerhit = 0.4,
+    playerAnalysis = {
+      Drift = 0.5,
+      Jump = 0.7,
+      Overtake = 0.5,
+      OvertakeOncomming = 0.7,
+      Trailer = 0.8,
+      HighSpeedDriving = 0.5,
+      SafeDriving = 0.5,
+      PlayerCollision = 0.01,
+      DrivingInAnAlley = 0.5
+    },
+    playerAnalysisDecay = 0.0001
+  },
+  ["TheGetaway"] = {
+    requiredNumberOfChasers = 1,
+    chaseMode = "Cop",
+    cantEscapeTime = 12,
+    getawayHelperTime = 120,
+    normalRBRadiusFollowDistanceMultiplier = 0.4,
+    getawayTraits = {
+      desiredSpeed = 38,
+      rubberBandPlayerStrength = 20,
+      rubberBandMinVelocity = 32,
+      rubberBandMaxVelocity = 47,
+      getawayCollisionThreshold = 2
+    },
+    fullPlayerAnalysisRBMinVelocity = 25,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 1.5,
+    getawayMaxDamagePerhit = 0.4,
+    playerAnalysis = {
+      Drift = 0.7,
+      Jump = 1,
+      Overtake = 0.7,
+      OvertakeOncomming = 1,
+      Trailer = 1,
+      HighSpeedDriving = 0.8,
+      SafeDriving = 0.8,
+      PlayerCollision = 0.01,
+      DrivingInAnAlley = 0
+    },
+    playerAnalysisDecay = 0.0001
+  },
+  ["RussianHillTakedown"] = {
+    requiredNumberOfChasers = 1,
+    chaseMode = "Goon",
+    cantEscapeTime = 12,
+    normalRBRadiusFollowDistanceMultiplier = 0.4,
+    getawayTraits = {
+      desiredSpeed = 40,
+      rubberBandPlayerStrength = 20,
+      rubberBandMinVelocity = 35,
+      rubberBandMaxVelocity = 45,
+      getawayCollisionThreshold = 2
+    },
+    fullPlayerAnalysisRBMinVelocity = 25,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 1.8,
+    getawayMaxDamagePerhit = 0.4,
+    playerAnalysis = {
+      Drift = 1.5,
+      Jump = 1.5,
+      Overtake = 1,
+      OvertakeOncomming = 1,
+      Trailer = 1,
+      HighSpeedDriving = 1,
+      SafeDriving = 1.5,
+      PlayerCollision = 0.01,
+      DrivingInAnAlley = 1
+    },
+    playerAnalysisDecay = 0.0001
+  },
+  ["ChaseActivity1"] = {
+    requiredNumberOfChasers = 1,
+    chaseMode = "Goon",
+    getawayHelperTime = 120,
+    normalRBRadiusFollowDistanceMultiplier = 0.4,
+    normalRouteGenerationPreset = "Easy",
+    getawayTraits = {
+      desiredSpeed = 38,
+      rubberBandPlayerStrength = 15,
+      rubberBandMinVelocity = 35,
+      rubberBandMaxVelocity = 43,
+      rubberBandPlayerFollowRange = 40,
+      getawayCollisionThreshold = 1
+    },
+    fullPlayerAnalysisRBMinVelocity = 30,
+    fullPlayerAnalysisRBMaxVelocity = 35,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 1.5,
+    getawayMaxDamagePerhit = 0.4,
+    playerAnalysis = {
+      Drift = 0.8,
+      Jump = 0.5,
+      Overtake = 1,
+      OvertakeOncomming = 1.5,
+      Trailer = 1,
+      HighSpeedDriving = 1,
+      SafeDriving = 1,
+      PlayerCollision = 0.05,
+      DrivingInAnAlley = 0
+    },
+    playerAnalysisDecay = 0.0001
+  },
+  ["ChaseActivity2"] = {
+    requiredNumberOfChasers = 1,
+    chaseMode = "Goon",
+    getawayHelperTime = 160,
+    normalRBRadiusFollowDistanceMultiplier = 0.4,
+    normalRouteGenerationPreset = "Medium",
+    getawayTraits = {
+      desiredSpeed = 45,
+      rubberBandPlayerStrength = 20,
+      rubberBandMinVelocity = 31,
+      rubberBandMaxVelocity = 49,
+      rubberBandPlayerFollowRange = 50,
+      getawayCollisionThreshold = 4
+    },
+    fullPlayerAnalysisRBMinVelocity = 26,
+    fullPlayerAnalysisRBMaxVelocity = 37,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 1.3,
+    getawayMaxDamagePerhit = 0.4,
+    playerAnalysis = {
+      Drift = 0.7,
+      Jump = 0.5,
+      Overtake = 0.8,
+      OvertakeOncomming = 1.2,
+      Trailer = 1,
+      HighSpeedDriving = 0.9,
+      SafeDriving = 0.9,
+      PlayerCollision = 0.05,
+      DrivingInAnAlley = 0
+    },
+    playerAnalysisDecay = 0.0001
+  },
+  ["ChaseActivity3"] = {
+    requiredNumberOfChasers = 1,
+    chaseMode = "Goon",
+    getawayHelperTime = 200,
+    normalRBRadiusFollowDistanceMultiplier = 0.3,
+    normalRouteGenerationPreset = "Medium",
+    getawayTraits = {
+      desiredSpeed = 54,
+      rubberBandPlayerStrength = 20,
+      rubberBandMinVelocity = 40,
+      rubberBandMaxVelocity = 58,
+      rubberBandPlayerFollowRange = 50,
+      getawayCollisionThreshold = 1
+    },
+    fullPlayerAnalysisRBMinVelocity = 32,
+    fullPlayerAnalysisRBMaxVelocity = 38,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 1,
+    getawayMaxDamagePerhit = 0.3,
+    playerAnalysis = {
+      Drift = 0.7,
+      Jump = 0.5,
+      Overtake = 0.8,
+      OvertakeOncomming = 1.2,
+      Trailer = 1,
+      HighSpeedDriving = 0.9,
+      SafeDriving = 0.9,
+      PlayerCollision = 0.05,
+      DrivingInAnAlley = 0
+    },
+    playerAnalysisDecay = 0.0001
+  },
+  ["ChaseActivity4"] = {
+    requiredNumberOfChasers = 1,
+    chaseMode = "Goon",
+    getawayHelperTime = 240,
+    normalRBRadiusFollowDistanceMultiplier = 0.5,
+    normalRouteGenerationPreset = "Easy",
+    getawayTraits = {
+      desiredSpeed = 58,
+      rubberBandPlayerStrength = 20,
+      rubberBandMinVelocity = 40,
+      rubberBandMaxVelocity = 66,
+      rubberBandPlayerFollowRange = 50,
+      getawayCollisionThreshold = 2
+    },
+    fullPlayerAnalysisRBMinVelocity = 30,
+    fullPlayerAnalysisRBMaxVelocity = 45,
+    fullPlayerAnalysisRBPlayerStrength = 20,
+    getawayDamageMultiplier = 1.3,
+    getawayMaxDamagePerhit = 0.4,
+    playerAnalysis = {
+      Drift = 0.7,
+      Jump = 0.5,
+      Overtake = 0.8,
+      OvertakeOncomming = 1.2,
+      Trailer = 1,
+      HighSpeedDriving = 0.8,
+      SafeDriving = 0.8,
+      PlayerCollision = 0.05,
+      DrivingInAnAlley = 0
+    },
+    playerAnalysisDecay = 0.0001
+  }
+}

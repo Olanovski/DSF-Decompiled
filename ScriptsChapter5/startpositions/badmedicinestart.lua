@@ -1,0 +1,10 @@
+startPositions = startPositions or {}
+startPositions["Bad medicine start"] = {}
+startPositions["Bad medicine start"].position = vec.vector(1766.983, 30.0958, -4651.444, 1)
+startPositions["Bad medicine start"].heading = 0.5677791
+softSaveStartPositions = softSaveStartPositions or {}
+softSaveStartPositions["Bad medicine"] = {}
+softSaveStartPositions["Bad medicine"][1] = {}
+softSaveStartPositions["Bad medicine"][1]["Attacker1 (Actor)"] = {}
+softSaveStartPositions["Bad medicine"][1]["Attacker1 (Actor)"].position = vec.vector(1289.451, 30.01144, -4205.028, 1)
+softSaveStartPositions["Bad medicine"][1]["Attacker1 (Actor)"].heading = -2.470457

@@ -1,0 +1,14 @@
+startPositions = startPositions or {}
+startPositions.TheDriverStart = {}
+startPositions.TheDriverStart.position = vec.vector(594.283, 6.348152, 1347.305, 1)
+startPositions.TheDriverStart.heading = -0.9713343
+startPositions.TheDriverStart.radius = 400
+spawnPositions = spawnPositions or {}
+spawnPositions.TheDriverPlayerSpawn = {}
+spawnPositions.TheDriverPlayerSpawn.position = vec.vector(594.283, 6.348152, 1347.305, 1)
+spawnPositions.TheDriverPlayerSpawn.heading = -0.9713343
+spawnPositions.TheDriverPlayerSpawn.radius = 200
+spawnPositions.TheDriverGetawaySpawn = {}
+spawnPositions.TheDriverGetawaySpawn.position = vec.vector(551.577, 6.080905, 1428.368, 1)
+spawnPositions.TheDriverGetawaySpawn.heading = -2.446062
+spawnPositions.TheDriverGetawaySpawn.radius = 200

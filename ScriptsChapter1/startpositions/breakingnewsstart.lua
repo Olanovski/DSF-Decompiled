@@ -1,0 +1,14 @@
+startPositions = startPositions or {}
+startPositions["Breaking news start"] = {}
+startPositions["Breaking news start"].position = vec.vector(-856.7424, 40.586, 1122.264, 1)
+startPositions["Breaking news start"].heading = 1.675086
+spawnPositions = spawnPositions or {}
+spawnPositions["Breaking news spawn"] = {}
+spawnPositions["Breaking news spawn"].position = vec.vector(-856.7424, 40.586, 1122.264, 1)
+spawnPositions["Breaking news spawn"].heading = 1.675086
+softSaveStartPositions = softSaveStartPositions or {}
+softSaveStartPositions["Breaking news"] = {}
+softSaveStartPositions["Breaking news"][1] = {}
+softSaveStartPositions["Breaking news"][1]["Van Actor"] = {}
+softSaveStartPositions["Breaking news"][1]["Van Actor"].position = vec.vector(-265.2207, 17.98241, 907.0206, 1)
+softSaveStartPositions["Breaking news"][1]["Van Actor"].heading = 2.617335

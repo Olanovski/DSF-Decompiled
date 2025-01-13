@@ -1,0 +1,11 @@
+gameStatus.registerEvent("initialise", "Model previewer", function()
+  spoolsystem.position = vec.vector(0, 2.1, 0, 0)
+  minimap.SetOn(false)
+  ModelPreviewer.Camera = CameraSystem.CreateCamera()
+  ModelPreviewer.Camera.viewport = 0
+  CameraSystemRegisterUpdate("PreviewCam", ModelPreviewer.Camera, "real", Camera_Function_Free_Cam)
+  ModelPreviewer.SetCurrentCameraMatrix(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 20, 0, 1)
+  shadow = Shadows.Get("MainViewport")
+  shadow:Disable()
+  print("<PREVIEWER><TAGTYPE=GAMEISLOADED>")
+end)

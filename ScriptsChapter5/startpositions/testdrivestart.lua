@@ -1,0 +1,10 @@
+startPositions = startPositions or {}
+startPositions["Test drive player 1"] = {}
+startPositions["Test drive player 1"].position = vec.vector(-2851.764, 92.76019, 2722.572, 1)
+startPositions["Test drive player 1"].heading = -1.577633
+softSaveStartPositions = softSaveStartPositions or {}
+softSaveStartPositions.TestDrive = {}
+softSaveStartPositions.TestDrive[1] = {}
+softSaveStartPositions.TestDrive[1].Ordell = {}
+softSaveStartPositions.TestDrive[1].Ordell.position = vec.vector(-3645.881, 57.50656, 2821.361, 1)
+softSaveStartPositions.TestDrive[1].Ordell.heading = -1.855167

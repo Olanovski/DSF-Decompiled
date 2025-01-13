@@ -1,0 +1,9 @@
+startPositions = startPositions or {}
+startPositions.Epilogue = {}
+startPositions.Epilogue.position = vec.vector(2829.301, 19.89109, -831.3975, 1)
+startPositions.Epilogue.heading = -1.101253
+startPositions.Epilogue.radius = 400
+startPositions["Epilogue part 2"] = {}
+startPositions["Epilogue part 2"].position = vec.vector(1005.119, 6.135271, 1522.512, 1)
+startPositions["Epilogue part 2"].heading = 0.8285307
+startPositions["Epilogue part 2"].radius = 400

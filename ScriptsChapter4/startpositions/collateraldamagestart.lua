@@ -1,0 +1,14 @@
+startPositions = startPositions or {}
+startPositions["Collateral Damage Start"] = {}
+startPositions["Collateral Damage Start"].position = vec.vector(-2257.584, 176.9811, 3890.803, 1)
+startPositions["Collateral Damage Start"].heading = -2.301936
+startPositions["Collateral Damage Start"].radius = 400
+softSaveStartPositions = softSaveStartPositions or {}
+softSaveStartPositions["Collateral Damage"] = {}
+softSaveStartPositions["Collateral Damage"][1] = {}
+softSaveStartPositions["Collateral Damage"][1]["Tanner 2"] = {}
+softSaveStartPositions["Collateral Damage"][1]["Tanner 2"].position = vec.vector(-4013.135, 24.87361, 2613.316, 1)
+softSaveStartPositions["Collateral Damage"][1]["Tanner 2"].heading = 1.853216
+softSaveStartPositions["Collateral Damage"][1]["First civ"] = {}
+softSaveStartPositions["Collateral Damage"][1]["First civ"].position = vec.vector(-4077.766, 21.20823, 2577.811, 1)
+softSaveStartPositions["Collateral Damage"][1]["First civ"].heading = 1.289226

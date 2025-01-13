@@ -1,0 +1,10 @@
+startPositions = startPositions or {}
+startPositions.DownhillDriftStart = {}
+startPositions.DownhillDriftStart.position = vec.vector(-3973.579, 101.9248, -2439.107, 1)
+startPositions.DownhillDriftStart.heading = -2.275152
+startPositions.DownhillDriftStart.radius = 400
+spawnPositions = spawnPositions or {}
+spawnPositions.DownhillDriftSpawn = {}
+spawnPositions.DownhillDriftSpawn.position = vec.vector(-3973.579, 101.9248, -2439.107, 1)
+spawnPositions.DownhillDriftSpawn.heading = -2.275152
+spawnPositions.DownhillDriftSpawn.radius = 200

@@ -1,0 +1,14 @@
+startPositions = startPositions or {}
+startPositions.RussianHillTakedownStart = {}
+startPositions.RussianHillTakedownStart.position = vec.vector(-1078.895, 14.81701, 63.38341, 1)
+startPositions.RussianHillTakedownStart.heading = 0.1050944
+startPositions.RussianHillTakedownStart.radius = 400
+spawnPositions = spawnPositions or {}
+spawnPositions.RussianHillTakedownPlayerSpawn = {}
+spawnPositions.RussianHillTakedownPlayerSpawn.position = vec.vector(-1078.895, 14.81701, 63.38341, 1)
+spawnPositions.RussianHillTakedownPlayerSpawn.heading = 0.1050944
+spawnPositions.RussianHillTakedownPlayerSpawn.radius = 200
+spawnPositions.RussianHillTakedownGetawaySpawn = {}
+spawnPositions.RussianHillTakedownGetawaySpawn.position = vec.vector(-1084.844, 14.73466, 162.831, 1)
+spawnPositions.RussianHillTakedownGetawaySpawn.heading = 1.3345
+spawnPositions.RussianHillTakedownGetawaySpawn.radius = 200

@@ -1,0 +1,14 @@
+startPositions = startPositions or {}
+startPositions["GetawayActivity3 start"] = {}
+startPositions["GetawayActivity3 start"].position = vec.vector(-1165.903, 120.0547, -4757.377, 1)
+startPositions["GetawayActivity3 start"].heading = 1.419005
+spawnPositions = spawnPositions or {}
+spawnPositions["GetawayActivity3 Player spawn"] = {}
+spawnPositions["GetawayActivity3 Player spawn"].position = vec.vector(-1165.903, 120.0547, -4757.377, 1)
+spawnPositions["GetawayActivity3 Player spawn"].heading = 1.419005
+spawnPositions["GetawayActivity3 Opponent spawn"] = {}
+spawnPositions["GetawayActivity3 Opponent spawn"].position = vec.vector(-1157.421, 118.9858, -4857.5, 1)
+spawnPositions["GetawayActivity3 Opponent spawn"].heading = 0.286159
+hotspotData = hotspotData or {}
+hotspotData["GetawayActivity3 end"] = {}
+hotspotData["GetawayActivity3 end"].position = vec.vector(941.1395, -9.921001, -1850.226, 1)

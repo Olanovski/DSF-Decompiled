@@ -1,0 +1,13 @@
+routes = routes or {}
+routes["Qualifying Overtake 03"] = {}
+routes["Qualifying Overtake 03"].checkpoints = {}
+routes["Qualifying Overtake 03"].checkpoints[1] = {}
+routes["Qualifying Overtake 03"].checkpoints[1].position = vec.vector(456.9967, 9.772966, 1157.409, 1)
+routes["Qualifying Overtake 03"].checkpoints[1].heading = 0.1801905
+routes["Qualifying Overtake 03"].checkpoints[1].roadName = "dt_shortcut_15 AI Road 1"
+routes["Qualifying Overtake 03"].checkpoints[2] = {}
+routes["Qualifying Overtake 03"].checkpoints[2].position = vec.vector(457.2543, 9.604086, 1159.05, 1)
+routes["Qualifying Overtake 03"].checkpoints[2].heading = 0.1783289
+routes["Qualifying Overtake 03"].checkpoints[2].roadName = "dt_shortcut_15 AI Road 1"
+routes["Qualifying Overtake 03"].arrows = {}
+routes["Qualifying Overtake 03"].roads = {}

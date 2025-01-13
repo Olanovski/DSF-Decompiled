@@ -1,0 +1,16 @@
+startPositions = startPositions or {}
+startPositions["Kill tanner Start"] = {}
+startPositions["Kill tanner Start"].position = vec.vector(-2867.245, 38.80834, -1751.613, 1)
+startPositions["Kill tanner Start"].heading = 2.592996
+startPositions["Tanner Kill tanner start"] = {}
+startPositions["Tanner Kill tanner start"].position = vec.vector(-2867.245, 38.80834, -1751.613, 1)
+startPositions["Tanner Kill tanner start"].heading = 2.592996
+softSaveStartPositions = softSaveStartPositions or {}
+softSaveStartPositions["Kill Tanner"] = {}
+softSaveStartPositions["Kill Tanner"][1] = {}
+softSaveStartPositions["Kill Tanner"][1].Ordell = {}
+softSaveStartPositions["Kill Tanner"][1].Ordell.position = vec.vector(-1938.188, 8.209471, -2485.649, 1)
+softSaveStartPositions["Kill Tanner"][1].Ordell.heading = 2.70962
+softSaveStartPositions["Kill Tanner"][1].Tanner2 = {}
+softSaveStartPositions["Kill Tanner"][1].Tanner2.position = vec.vector(-1932.654, 8.20381, -2496.921, 1)
+softSaveStartPositions["Kill Tanner"][1].Tanner2.heading = 2.867036

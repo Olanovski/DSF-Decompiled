@@ -1,0 +1,11 @@
+startPositions = startPositions or {}
+startPositions.LuckyEscapeStart = {}
+startPositions.LuckyEscapeStart.position = vec.vector(-324.501, 76.81338, 4093.314, 1)
+startPositions.LuckyEscapeStart.heading = -0.0637766
+spawnPositions = spawnPositions or {}
+spawnPositions.LuckyEscapePlayerSpawn = {}
+spawnPositions.LuckyEscapePlayerSpawn.position = vec.vector(-324.501, 76.81338, 4093.314, 1)
+spawnPositions.LuckyEscapePlayerSpawn.heading = -0.0637766
+spawnPositions.LuckyEscapeOpponentSpawn = {}
+spawnPositions.LuckyEscapeOpponentSpawn.position = vec.vector(-239.878, 78.30172, 4000.635, 1)
+spawnPositions.LuckyEscapeOpponentSpawn.heading = -1.425558

@@ -1,0 +1,13 @@
+startPositions = startPositions or {}
+startPositions.ExpositionLawbreakerCopStart = {}
+startPositions.ExpositionLawbreakerCopStart.position = vec.vector(-787.5862, 33.04204, 1183.1, 1)
+startPositions.ExpositionLawbreakerCopStart.heading = -2.914884
+startPositions.ExpositionLawbreakerCopStart.radius = 400
+startPositions.ExpositionLawbreakerGetawayStart = {}
+startPositions.ExpositionLawbreakerGetawayStart.position = vec.vector(-795.8258, 34.31797, 1147.797, 1)
+startPositions.ExpositionLawbreakerGetawayStart.heading = -2.910635
+startPositions.ExpositionLawbreakerGetawayStart.radius = 400
+afterEndScreenLocations = afterEndScreenLocations or {}
+afterEndScreenLocations.Takedown = {}
+afterEndScreenLocations.Takedown.position = vec.vector(-691.5358, 31.04195, 1230.409, 1)
+afterEndScreenLocations.Takedown.heading = -3.1

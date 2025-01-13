@@ -1,0 +1,16 @@
+spawnPositions = spawnPositions or {}
+spawnPositions["Exposition part 1 tanner"] = {}
+spawnPositions["Exposition part 1 tanner"].position = vec.vector(-442.8301, 30.14007, 2220.775, 1)
+spawnPositions["Exposition part 1 tanner"].heading = -1.083004
+spawnPositions["Exposition part 1 jericho"] = {}
+spawnPositions["Exposition part 1 jericho"].position = vec.vector(-848.0193, 66.96736, 2180.755, 1)
+spawnPositions["Exposition part 1 jericho"].heading = -2.434099
+spawnPositions["He's getting away - cop 1"] = {}
+spawnPositions["He's getting away - cop 1"].position = vec.vector(-532.561, 40.87973, 2056.469, 1)
+spawnPositions["He's getting away - cop 1"].heading = -1.080822
+spawnPositions["He's getting away - cop 2"] = {}
+spawnPositions["He's getting away - cop 2"].position = vec.vector(-509.2915, 40.90921, 2044.084, 1)
+spawnPositions["He's getting away - cop 2"].heading = -1.080822
+spawnPositions["He's getting away - cop 3"] = {}
+spawnPositions["He's getting away - cop 3"].position = vec.vector(-988.0012, 66.88727, 2037.449, 1)
+spawnPositions["He's getting away - cop 3"].heading = 1.995779

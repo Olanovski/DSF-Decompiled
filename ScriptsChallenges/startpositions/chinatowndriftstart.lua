@@ -1,0 +1,10 @@
+startPositions = startPositions or {}
+startPositions.ChinatownDriftStart = {}
+startPositions.ChinatownDriftStart.position = vec.vector(-786.8615, 32.85751, 1187.895, 1)
+startPositions.ChinatownDriftStart.heading = -2.922292
+startPositions.ChinatownDriftStart.radius = 400
+spawnPositions = spawnPositions or {}
+spawnPositions.ChinatownDriftSpawn = {}
+spawnPositions.ChinatownDriftSpawn.position = vec.vector(-786.8615, 32.85751, 1187.895, 1)
+spawnPositions.ChinatownDriftSpawn.heading = -2.922292
+spawnPositions.ChinatownDriftSpawn.radius = 200

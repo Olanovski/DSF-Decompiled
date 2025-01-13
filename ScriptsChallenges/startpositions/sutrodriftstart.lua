@@ -1,0 +1,9 @@
+startPositions = startPositions or {}
+startPositions.SutroDriftStart = {}
+startPositions.SutroDriftStart.position = vec.vector(-1466.576, 177.2056, 4053.099, 1)
+startPositions.SutroDriftStart.heading = -2.835834
+startPositions.SutroDriftStart.radius = 400
+spawnPositions = spawnPositions or {}
+spawnPositions.SutroDriftSpawn = {}
+spawnPositions.SutroDriftSpawn.position = vec.vector(-1466.576, 177.2056, 4053.099, 1)
+spawnPositions.SutroDriftSpawn.heading = -2.835834

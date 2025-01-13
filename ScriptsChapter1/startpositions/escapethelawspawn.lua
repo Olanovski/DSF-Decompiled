@@ -1,0 +1,14 @@
+startPositions = startPositions or {}
+startPositions["Escape the law start"] = {}
+startPositions["Escape the law start"].position = vec.vector(-1294.115, 34.36937, 357.0443, 1)
+startPositions["Escape the law start"].heading = 1.772742
+spawnPositions = spawnPositions or {}
+spawnPositions["Escape the law dropoff spawn"] = {}
+spawnPositions["Escape the law dropoff spawn"].position = vec.vector(1108.872, 5.977237, 804.4082, 1)
+spawnPositions["Escape the law dropoff spawn"].heading = 0.70418
+spawnPositions["Escape the law cop spawn"] = {}
+spawnPositions["Escape the law cop spawn"].position = vec.vector(-1380.615, 34.314, 377.6756, 1)
+spawnPositions["Escape the law cop spawn"].heading = 1.757142
+spawnPositions["Escape the law cop2 spawn"] = {}
+spawnPositions["Escape the law cop2 spawn"].position = vec.vector(-1383.996, 34.51637, 373.6445, 1)
+spawnPositions["Escape the law cop2 spawn"].heading = 1.785623

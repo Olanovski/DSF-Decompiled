@@ -1,0 +1,10 @@
+startPositions = startPositions or {}
+startPositions.FinalDestinationStart = {}
+startPositions.FinalDestinationStart.position = vec.vector(-2471.254, 27.22321, 135.0146, 1)
+startPositions.FinalDestinationStart.heading = -0.3525625
+softSaveStartPositions = softSaveStartPositions or {}
+softSaveStartPositions["Final destination"] = {}
+softSaveStartPositions["Final destination"][1] = {}
+softSaveStartPositions["Final destination"][1].MissionVehicle = {}
+softSaveStartPositions["Final destination"][1].MissionVehicle.position = vec.vector(-1609.397, 180.9828, 4013.106, 1)
+softSaveStartPositions["Final destination"][1].MissionVehicle.heading = -1.29674

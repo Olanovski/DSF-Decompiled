@@ -1,0 +1,16 @@
+spawnPositions = spawnPositions or {}
+spawnPositions["Tanner and Jones 4 spawn"] = {}
+spawnPositions["Tanner and Jones 4 spawn"].position = vec.vector(-4443.088, 21.50332, 3150.786, 1)
+spawnPositions["Tanner and Jones 4 spawn"].heading = 3.116788
+spawnPositions["Tanner and Jones 4 Krug spawn"] = {}
+spawnPositions["Tanner and Jones 4 Krug spawn"].position = vec.vector(-4405.203, 14.71617, 2218.369, 1)
+spawnPositions["Tanner and Jones 4 Krug spawn"].heading = -2.276567
+spawnPositions["Attacker 01 spawn"] = {}
+spawnPositions["Attacker 01 spawn"].position = vec.vector(-1798.653, 5.031683, -185.1182, 1)
+spawnPositions["Attacker 01 spawn"].heading = 1.754511
+spawnPositions["Attacker 02 spawn"] = {}
+spawnPositions["Attacker 02 spawn"].position = vec.vector(-1501.311, 4.99688, -235.4641, 1)
+spawnPositions["Attacker 02 spawn"].heading = 2.27271
+spawnPositions["Attacker 03 spawn"] = {}
+spawnPositions["Attacker 03 spawn"].position = vec.vector(-1322.899, 4.973113, -281.712, 1)
+spawnPositions["Attacker 03 spawn"].heading = 1.721708

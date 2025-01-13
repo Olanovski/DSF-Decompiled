@@ -1,0 +1,12 @@
+startPositions = startPositions or {}
+startPositions.TheGetawayStart = {}
+startPositions.TheGetawayStart.position = vec.vector(-1082.088, 79.74496, 2436.364, 1)
+startPositions.TheGetawayStart.heading = -2.414193
+startPositions.TheGetawayStart.radius = 400
+spawnPositions = spawnPositions or {}
+spawnPositions.TheGetawaySpawn = {}
+spawnPositions.TheGetawaySpawn.position = vec.vector(-1082.088, 79.74496, 2436.364, 1)
+spawnPositions.TheGetawaySpawn.heading = -2.414193
+spawnPositions.TheGetawaySpawn2 = {}
+spawnPositions.TheGetawaySpawn2.position = vec.vector(-1110.11, 79.75803, 2375.041, 1)
+spawnPositions.TheGetawaySpawn2.heading = 1.535737

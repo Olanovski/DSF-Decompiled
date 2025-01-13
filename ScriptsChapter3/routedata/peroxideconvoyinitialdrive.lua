@@ -1,0 +1,15 @@
+routes = routes or {}
+routes["Peroxide convoy initial drive"] = {}
+routes["Peroxide convoy initial drive"].checkpoints = {}
+routes["Peroxide convoy initial drive"].checkpoints[1] = {}
+routes["Peroxide convoy initial drive"].checkpoints[1].position = vec.vector(-3155.827, 57, 2516.039, 1)
+routes["Peroxide convoy initial drive"].checkpoints[1].heading = 3.108099
+routes["Peroxide convoy initial drive"].checkpoints[1].roadName = "ggp_10l_south_02 AI Road 0"
+routes["Peroxide convoy initial drive"].arrows = {}
+routes["Peroxide convoy initial drive"].roads = {}
+routes["Peroxide convoy initial drive"].roads[1] = {}
+routes["Peroxide convoy initial drive"].roads[1].road = "ggp_10l_south_02 AI Road 1"
+routes["Peroxide convoy initial drive"].roads[1].direction = "against"
+routes["Peroxide convoy initial drive"].roads[2] = {}
+routes["Peroxide convoy initial drive"].roads[2].road = "ggp_10l_south_02 AI Road 0"
+routes["Peroxide convoy initial drive"].roads[2].direction = "against"

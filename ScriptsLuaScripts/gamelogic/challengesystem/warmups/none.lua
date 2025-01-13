@@ -1,0 +1,1 @@
+challengeSystem.registerWarmup("None")

@@ -1,0 +1,11 @@
+spawnPositions = spawnPositions or {}
+spawnPositions["Final fight tanner spawn"] = {}
+spawnPositions["Final fight tanner spawn"].position = vec.vector(211.5346, 18.07427, 998.5433, 1)
+spawnPositions["Final fight tanner spawn"].heading = 1.668315
+spawnPositions["Final fight jericho spawn"] = {}
+spawnPositions["Final fight jericho spawn"].position = vec.vector(242.2663, 17.9721, 996.8881, 1)
+spawnPositions["Final fight jericho spawn"].heading = 1.668315
+spawnPositions["Final fight jericho target 1"] = {}
+spawnPositions["Final fight jericho target 1"].position = vec.vector(-692.0336, 27.98933, 514.9204, 1)
+spawnPositions["Final fight jericho target 2"] = {}
+spawnPositions["Final fight jericho target 2"].position = vec.vector(-284.4349, 70.23163, 171.0678, 1)

@@ -1,0 +1,10 @@
+spawnPositions = spawnPositions or {}
+spawnPositions["Bad medicine 2 convoy2"] = {}
+spawnPositions["Bad medicine 2 convoy2"].position = vec.vector(347.0282, 14.743, 3673.855, 1)
+spawnPositions["Bad medicine 2 convoy2"].heading = 0.408
+spawnPositions["Bad medicine 2 convoy4"] = {}
+spawnPositions["Bad medicine 2 convoy4"].position = vec.vector(554.57, 8.248, 3609.585, 1)
+spawnPositions["Bad medicine 2 convoy4"].heading = -0.556
+spawnPositions["Bad medicine 2 attacker"] = {}
+spawnPositions["Bad medicine 2 attacker"].position = vec.vector(1128.85, 8.412, 3098.869, 1)
+spawnPositions["Bad medicine 2 attacker"].heading = 0.026

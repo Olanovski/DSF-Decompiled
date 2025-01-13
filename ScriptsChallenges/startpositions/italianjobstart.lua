@@ -1,0 +1,9 @@
+startPositions = startPositions or {}
+startPositions.ItalianJobStart = {}
+startPositions.ItalianJobStart.position = vec.vector(-918.1348, 105.1398, -4611.23, 1)
+startPositions.ItalianJobStart.heading = -2.092863
+startPositions.ItalianJobStart.radius = 400
+spawnPositions = spawnPositions or {}
+spawnPositions.ItalianJobSpawn = {}
+spawnPositions.ItalianJobSpawn.position = vec.vector(-918.1348, 105.1398, -4611.23, 1)
+spawnPositions.ItalianJobSpawn.heading = -2.092863
