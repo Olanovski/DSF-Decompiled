@@ -1,0 +1,15 @@
+startPositions = startPositions or {}
+startPositions.RelayRaceActivityStart = {}
+startPositions.RelayRaceActivityStart.position = vec.vector(-3203.616, 108.6491, 3495.855, 1)
+startPositions.RelayRaceActivityStart.heading = -2.716944
+startPositions.RelayRaceActivityStart.radius = 40
+spawnPositions = spawnPositions or {}
+spawnPositions["Relay Race Activity Team 1 spawn"] = {}
+spawnPositions["Relay Race Activity Team 1 spawn"].position = vec.vector(-3201.719, 105.5612, 3467.976, 1)
+spawnPositions["Relay Race Activity Team 1 spawn"].heading = 1.963101
+spawnPositions["Relay Race Activity Team 2 spawn"] = {}
+spawnPositions["Relay Race Activity Team 2 spawn"].position = vec.vector(-3184.521, 106.6337, 3465.844, 1)
+spawnPositions["Relay Race Activity Team 2 spawn"].heading = 1.778848
+spawnPositions["Relay Race Activity Team 3 spawn"] = {}
+spawnPositions["Relay Race Activity Team 3 spawn"].position = vec.vector(-3172.933, 107.3484, 3466.169, 1)
+spawnPositions["Relay Race Activity Team 3 spawn"].heading = 1.778273

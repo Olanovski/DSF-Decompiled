@@ -1,0 +1,13 @@
+startPositions = startPositions or {}
+startPositions["Race activity 1 start"] = {}
+startPositions["Race activity 1 start"].position = vec.vector(-1464.245, 40.79397, 1069.455, 1)
+startPositions["Race activity 1 start"].heading = 1.706905
+startPositions["Race activity 1 start"].radius = 40
+startPositions["Race activity 2 start"] = {}
+startPositions["Race activity 2 start"].position = vec.vector(-4256.48, 31.9344, 1288.278, 1)
+startPositions["Race activity 2 start"].heading = 2.293385
+startPositions["Race activity 2 start"].radius = 40
+startPositions["Race activity 3 start"] = {}
+startPositions["Race activity 3 start"].position = vec.vector(-2543.478, 5.358952, -239.032, 1)
+startPositions["Race activity 3 start"].heading = 3.084498
+startPositions["Race activity 3 start"].radius = 40

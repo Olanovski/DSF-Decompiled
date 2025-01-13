@@ -1,0 +1,13 @@
+routes = routes or {}
+routes.Tag_Start_01 = {}
+routes.Tag_Start_01.checkpoints = {}
+routes.Tag_Start_01.checkpoints[1] = {}
+routes.Tag_Start_01.checkpoints[1].position = vec.vector(883.1461, 5.975, 1084.359, 1)
+routes.Tag_Start_01.checkpoints[1].heading = 2.279181
+routes.Tag_Start_01.checkpoints[1].roadName = "embargedero_shortcut_02 AI Road 2"
+routes.Tag_Start_01.checkpoints[2] = {}
+routes.Tag_Start_01.checkpoints[2].position = vec.vector(902.0408, 5.975, 1068.156, 1)
+routes.Tag_Start_01.checkpoints[2].heading = 2.279581
+routes.Tag_Start_01.checkpoints[2].roadName = "embargedero_shortcut_02 AI Road 2"
+routes.Tag_Start_01.arrows = {}
+routes.Tag_Start_01.roads = {}

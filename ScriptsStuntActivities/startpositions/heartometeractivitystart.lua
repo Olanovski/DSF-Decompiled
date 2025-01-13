@@ -1,0 +1,13 @@
+startPositions = startPositions or {}
+startPositions.HeartometerActivity1Spawn = {}
+startPositions.HeartometerActivity1Spawn.position = vec.vector(-534.6123, 52.01887, 72.21233, 1)
+startPositions.HeartometerActivity1Spawn.heading = -1.379166
+startPositions.HeartometerActivity2Spawn = {}
+startPositions.HeartometerActivity2Spawn.position = vec.vector(685.1646, 8.212306, 3611.235, 1)
+startPositions.HeartometerActivity2Spawn.heading = -1.598709
+startPositions.HeartometerActivity3Spawn = {}
+startPositions.HeartometerActivity3Spawn.position = vec.vector(-1354.833, 7.758482, -2540.863, 1)
+startPositions.HeartometerActivity3Spawn.heading = -1.013963
+startPositions.HeartometerActivity4Spawn = {}
+startPositions.HeartometerActivity4Spawn.position = vec.vector(-2585.844, 70.87212, 2183.25, 1)
+startPositions.HeartometerActivity4Spawn.heading = 0.5128292

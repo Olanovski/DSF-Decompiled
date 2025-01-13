@@ -1,0 +1,103 @@
+missionProps = missionProps or {}
+missionProps.PureRace01 = {
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(0.1914257, 0.01055, 0.9814504, 0, -0.07365406, 0.9972772, 0.003645627, 0, -0.9787396, -0.07298567, 0.1916815, 0, -3065.727, 112.5944, 3454.494, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(-0.2113775, 0.0003000763, -0.9774045, 0, -0.05609646, 0.9983479, 0.01243816, 0, 0.9757934, 0.05745808, -0.2110114, 0, -3069.254, 112.4261, 3455.191, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(-0.2144713, -0.05121566, -0.9753866, 0, 0.01253621, 0.9983976, -0.05518043, 0, 0.9766498, -0.02406227, -0.2134856, 0, -3076.446, 112.6385, 3456.582, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(0.5693364, 0.1092181, 0.8148175, 0, -0.06236275, 0.9940178, -0.0896634, 0, -0.8197359, 0.0002343785, 0.5727416, 0, -3405.205, 75.49035, 3968.965, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(0.5713327, 0.02978955, 0.8201777, 0, -0.01735658, 0.9995561, -0.0242142, 0, -0.8205349, -0.0004011166, 0.5715961, 0, -3402.249, 75.48426, 3966.879, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(0.5958505, 0.02978808, 0.8025427, 0, -0.01735658, 0.9995561, -0.0242142, 0, -0.8029078, 0.0004986438, 0.596103, 0, -3396.726, 75.54765, 3962.879, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(0.5978857, 0.02978672, 0.8010277, 0, -0.01735658, 0.9995561, -0.0242142, 0, -0.8013934, 0.0005742218, 0.5981373, 0, -3399.448, 75.48627, 3964.834, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(0.8047789, -0.001683621, 0.5935723, 0, 0.001278159, 0.9999986, 0.001103461, 0, -0.5935733, -0.0001293627, 0.8047799, 0, -3796.402, 65.99245, 3952.063, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(0.7931536, -0.001685807, 0.6090193, 0, 0.001278159, 0.9999986, 0.001103461, 0, -0.6090203, -9.679096E-05, 0.7931547, 0, -3798.552, 66.0078, 3954.691, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(0.7809659, -0.001687391, 0.6245714, 0, 0.001278159, 0.9999986, 0.001103461, 0, -0.6245723, -6.346416E-05, 0.7809669, 0, -3802.792, 65.98946, 3959.846, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(0.7903946, -0.001686228, 0.6125957, 0, 0.001278159, 0.9999986, 0.001103461, 0, -0.6125968, -8.917518E-05, 0.7903956, 0, -3800.682, 65.98884, 3957.277, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(0.3938878, 5.803931E-07, 0.9191585, 0, -1.386181E-05, 1, 5.308772E-06, 0, -0.9191585, -1.483226E-05, 0.3938878, 0, -3552.091, 79.99895, 3217.065, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(-0.417818, -9.685298E-07, -0.9085307, 0, -1.386181E-05, 1, 5.308772E-06, 0, 0.9085307, 1.481198E-05, -0.417818, 0, -3555.045, 79.98999, 3218.395, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(-0.3677384, 3.021368E-10, -0.9299293, 0, 2.328306E-10, 1, 2.328306E-10, 0, 0.9299293, -1.308953E-10, -0.3677384, 0, -3558.094, 79.98474, 3219.733, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(-0.3853897, 3.045759E-10, -0.9227539, 0, 2.328306E-10, 1, 2.328306E-10, 0, 0.9227539, -1.251148E-10, -0.3853897, 0, -3561.183, 79.98515, 3220.848, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(-0.4097205, 3.077862E-10, -0.9122112, 0, 2.328306E-10, 1, 2.328306E-10, 0, 0.9122112, -1.169952E-10, -0.4097205, 0, -3564.141, 79.9996, 3222.079, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(0.1892806, 0.01039005, 0.981868, 0, 0.0256242, 0.9995512, -0.01551691, 0, -0.9815887, 0.02809663, 0.1889295, 0, -3072.838, 112.4419, 3455.927, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(0.2052099, -9.76899E-05, 0.9787179, 0, -0.0006277496, 0.9999998, 0.0002314358, 0, -0.9787177, -0.0006618827, 0.2052098, 0, -3393.577, 75.52773, 3993.711, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(0.2264843, 0.001077115, 0.9740142, 0, -0.001682281, 0.9999983, -0.0007146746, 0, -0.9740134, -0.001476704, 0.2264858, 0, -3390.056, 75.52428, 3992.92, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(0.3330592, -0.0002865275, 0.9429059, 0, -0.002984051, 0.9999946, 0.001357921, 0, -0.9429013, -0.003265947, 0.3330565, 0, -3372.943, 75.57969, 3987.843, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(-0.3263297, 0.0003097998, -0.9452559, 0, -0.002984051, 0.9999946, 0.001357921, 0, 0.9452513, 0.003263822, -0.3263271, 0, -3376.205, 75.57028, 3988.976, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(-0.2776349, 0.001358963, -0.9606857, 0, -0.00372529, 0.9999899, 0.002491158, 0, 0.9606794, 0.004270466, -0.2776271, 0, -3379.544, 75.56461, 3990.012, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(-0.2695762, 0.001394695, -0.9629781, 0, -0.00372529, 0.9999899, 0.002491158, 0, 0.9629719, 0.00425893, -0.2695683, 0, -3383.01, 75.54582, 3990.978, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(-0.2816956, -0.001159626, -0.9595031, 0, -0.001682281, 0.9999983, -0.0007146746, 0, 0.9595023, 0.001412834, -0.2816971, 0, -3386.505, 75.53097, 3991.962, 1)
+  },
+  {
+    name = "DO_NOT_USE_Barrier_Barracade_Concrete_MULTIPLAYER_ONLY",
+    matrix = vec.matrix(-0.04413015, -0.0005085029, -0.9990256, 0, -0.002940864, 0.9999956, -0.0003790893, 0, 0.9990214, 0.00292127, -0.04413145, 0, -3397.079, 75.51763, 3994.24, 1)
+  }
+}
